@@ -16,10 +16,11 @@ Private project knowledge, runtime configuration, sessions, personal memory, and
 
 ## Start here
 
-1. Read [`docs/architecture/01-core-principles.md`](docs/architecture/01-core-principles.md).
-2. Review the [knowledge model](docs/architecture/03-knowledge-model.md).
-3. Use [`skills/spec/SKILL.md`](skills/spec/SKILL.md) for validation and distribution commands.
-4. Use [`skills/workflows/SKILL.md`](skills/workflows/SKILL.md) when organizing dossiers, knowledge, or skills.
+1. Use [`AGENTS.md`](AGENTS.md) as the routing entry for agents.
+2. Read [`docs/architecture/01-core-principles.md`](docs/architecture/01-core-principles.md).
+3. Review the [knowledge model](docs/architecture/03-knowledge-model.md).
+4. Use [`skills/spec/SKILL.md`](skills/spec/SKILL.md) for validation and distribution commands.
+5. Use [`skills/workflows/SKILL.md`](skills/workflows/SKILL.md) when organizing dossiers, knowledge, or skills.
 
 To initialize a private workspace from this core:
 

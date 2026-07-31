@@ -3,6 +3,7 @@ name: workspace-governance-core
 
 # Canonical source only. Distribution artifacts are generated and never edited.
 include:
+  - AGENTS.md
   - README.md
   - docs/README.md
   - docs/architecture/
