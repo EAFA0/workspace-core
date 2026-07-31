@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# spec — 规范/how-to 确定性前门的短入口。
+# 解析自身真实路径（即使被 symlink 到 PATH 上也成立）→ 调同 skill 的 scripts/spec.py。
+export PYTHONDONTWRITEBYTECODE=1
+exec python3 "$(dirname "$(readlink -f "$0")")/../scripts/spec.py" "$@"

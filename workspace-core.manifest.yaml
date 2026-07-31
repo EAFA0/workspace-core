@@ -1,0 +1,34 @@
+version: 1
+name: workspace-governance-core
+
+# Canonical source only. Distribution artifacts are generated and never edited.
+include:
+  - README.md
+  - docs/README.md
+  - docs/architecture/
+  - docs/prd/README.md
+  - docs/biz-knowledge/README.md
+  - docs/repo-knowledge/README.md
+  - biz-tests/README.md
+  - skills/spec/
+  - skills/workflows/
+
+exclude:
+  - "**/__pycache__/**"
+  - "**/*.pyc"
+
+required_commands:
+  - python3
+  - git
+
+required_python_modules:
+  - yaml
+
+forbidden_patterns:
+  - "(?i)trae[x]?"
+  - "(?i)relay"
+  - "(?i)bytedance|bytedcli"
+  - "(?i)feishu|lark"
+  - "(?i)\\bBOE\\b|\\bTCC\\b"
+  - "/home/"
+  - "dengqichen"

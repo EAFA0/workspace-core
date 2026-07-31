@@ -1,0 +1,31 @@
+# spec.manifest.yaml — spec 工具唯一路由真相源
+#
+# 作用：把"某类文档存哪 / 用哪个模板 / owner 在哪 / 写完跑哪个校验器"
+#      集中在这一处维护。各文档正文不再散落这些 link——只写 "跑 python3 skills/spec/scripts/spec.py show <type>"。
+#      文件搬家 → 只改这里一行 → 所有引用它的文档零改动。
+#
+# 铁律：这里只放**路径与元信息**，绝不 hardcode 规范/how-to 正文。
+#      正文的单一真相源永远是 owner 指向的磁盘文件本身。
+#
+# 路径均相对 workspace 根（skills/ 的上级目录）。
+
+version: 1
+
+types:
+  biz-test:
+    title: "Biz-Test 写回（重要在线 case 沉淀为业务测试）"
+    kind: artifact
+    when: "在线测试跑出重要 case、值得回归时"
+    home: "biz-tests/"
+    naming: "<slug>/（一 case 集一目录）"
+    template: null
+    owner: "biz-tests/README.md"
+    section: "## 写回契约"
+    validate: null                                            # 无确定性结构校验器
+
+  kb-routing:
+    title: "知识入库 Owner 路由"
+    kind: decision-flow
+    when: "已验证知识写入、选择唯一 owner 时"
+    owner: "docs/architecture/03-knowledge-model.md"
+    section: "## 1. 内容分类"
